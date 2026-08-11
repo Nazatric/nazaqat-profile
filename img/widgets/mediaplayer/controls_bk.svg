@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="14.4"
+   height="14.4"
+   viewBox="0 0 14.4 14.4"
+   sodipodi:docname="controls_bk.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient980">
+      <stop
+         style="stop-color:#000000;stop-opacity:0.45936358;"
+         offset="0.00264851"
+         id="stop976" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0.21960784;"
+         offset="0.14792453"
+         id="stop986" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0.58431373;"
+         offset="0.49021655"
+         id="stop984" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop978" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient980"
+       id="linearGradient982"
+       x1="-9.221796"
+       y1="14.4"
+       x2="-9.221796"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.211339,0,0,1,18.370722,0)" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="29.965279"
+     inkscape:cx="-0.71749708"
+     inkscape:cy="5.9902664"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="41"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g8" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g8">
+    <rect
+       style="fill:url(#linearGradient982);fill-opacity:1;stroke:none;stroke-width:2.20122;stop-color:#000000"
+       id="rect291"
+       width="14.4"
+       height="14.4"
+       x="0"
+       y="0"
+       rx="0"
+       ry="0" />
+  </g>
+</svg>

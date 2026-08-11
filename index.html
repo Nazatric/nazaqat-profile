@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{ NAME }</title>
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preload" href="./img/widgets/mediaplayer/button_volume_down.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_pause_down.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_play_hover.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/trackslider_hover.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_next_disabled.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_volume_disabled.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/genericcover.jpg" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/playlisticon.jpg" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_stop_hover.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/trackslider.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_volume.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_prev_disabled.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_next.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_play_disabled.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/seekbar_bk.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/controls_bk2.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_pause_hover.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_stop.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_prev_hover.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_pause.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/seekbar_bk3.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/header_bk.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_prev.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_volume_hover.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_play.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/backgrounddefault.jpg" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_speed1.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_stop_down.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_next_down.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_play_down.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_prev_down.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/controls_bk.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_stop_disabled.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_next_hover.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/progress_bk.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_speed2.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/genericdisc.png" as="image">
+        <link rel="preload" href="./img/widgets/mediaplayer/button_pause_disabled.png" as="image">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="./img/icons_favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./img/icons_favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./img/icons_favicon/favicon-16x16.png">
+        <link rel="manifest" href="./img/icons_favicon/site.webmanifest">
+
+        <script src="js/JMediaPlayer9WidgetAgent_widget.js"></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div class="overlay-black" style="display:none;">
+            <div class="preview-widget note-preview" style="display:none;">
+                <div class="header">
+                    <img src="./img/icons/notes.png">
+                    <span class="title">Title</span>
+                    <button class="close-button" onclick="document.querySelector(`.overlay-black`).style.display='none'; document.querySelector(`.overlay-black .note-preview`).style.display='none'"></button>
+                </div>
+                <div class="inner-content">
+                    <span class="date">0000-00-00</span>
+                    <h1 class="title">Test</h1>
+                    <div class="markdown-content">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-widget image-preview" style="display:none;">
+                <div class="header">
+                    <img src="./img/icons/photos.png">
+                    <span class="title">Photo viewer</span>
+                    <button class="close-button" onclick="document.querySelector(`.overlay-black`).style.display='none'; document.querySelector(`.overlay-black .image-preview`).style.display='none'"></button>
+                </div>
+                <div class="inner-content">
+                    <img class="main" src="./img/genericimage.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="main-widget profile-header">
+            
+            <div class="avatar-cont">
+                <img class="avatar-overlay" src="./img/avatar_overlays/smoke.gif" style="opacity:0.7; display:none;">
+                <img class="avatar-main" src="./img/avatar.jpg">
+            </div>
+            <div class="text-area">
+                <span class="profilename">{ NAME }</span><br>
+                <span class="profilestatus">{ STATUS }</span>
+            </div>
+        </div>
+        <div class="main-widget profile-tabber">
+            <button disabled class="tabber" data-tabname="tab-home">
+                <div><img src="./img/icons/home.png"><span>Home</span></div>
+            </button>
+            <button class="tabber" data-tabname="tab-photos">
+                <div><img src="./img/icons/photos.png"><span>Photos</span></div>
+            </button>
+            <button class="tabber" data-tabname="tab-friends" style="display:none;">
+                <div><img src="./img/icons/friends.png"><span>Friends</span></div>
+            </button>
+            <button class="tabber" data-tabname="tab-notes">
+                <div><img src="./img/icons/notes.png"><span>Notes</span></div>
+            </button>
+            <button class="tabber" data-tabname="tab-musicplayer">
+                <div><img src="./img/icons/musicplayer.png"><span>Music Player</span></div>
+            </button>
+        </div>
+
+        <div class="tab-container tab-home">
+
+            <div class="main-widget with-header profile-info">
+                <div class="header">
+                    <img src="./img/icons/info.png">
+                    <span>About me</span>
+                </div>
+                <div class="inner-content">
+                    <img onclick="previewImage(this.src)" src="./img/avatar.jpg">
+                    <p>A weirdo but I'm real though!</p>
+                </div>
+            </div>
+
+            <div class="main-widget with-header profile-links">
+                <div class="header" onclick="showHiddenLinks();">
+                    <img src="./img/icons/links.png">
+                    <span>Links</span>
+                </div>
+                <div class="inner-content">
+                    <div class="link-cont">
+                        <a href="https://www.reddit.com/user/Nazatrics">
+                            <div class="icon-cont">
+                                <img class="shortcut-arrow" src="./img/icons/shortcut.png">
+                                <img class="icon" src="./img/logos/reddit2.png">
+                            </div>
+                            
+                            <span class="title">Reddit</span>
+                            <span class="title-sub">Nazatrics</span>
+                        </a>
+                    </div>
+                    <div class="link-cont">
+                        <a href="https://www.instagram.com/cybxlx">
+                            <div class="icon-cont">
+                                <img class="shortcut-arrow" src="./img/icons/shortcut.png">
+                                <img class="icon" src="./img/logos/instagram.png">
+                            </div>
+                            
+                            <span class="title">Instagram</span>
+                            <span class="title-sub">cybxlx</span>
+                        </a>
+                    </div>
+                    <div class="link-cont">
+                        <a href="https://discord.com/users/shinmohniu">
+                            <div class="icon-cont">
+                                <img class="shortcut-arrow" src="./img/icons/shortcut.png">
+                                <img class="icon" src="./img/logos/discord.png">
+                            </div>
+                            
+                            <span class="title">Discord</span>
+                            <span class="title-sub">shinmohniu</span>
+                        </a>
+                    </div>
+                    <div class="link-cont">
+                        <a href="https://open.spotify.com/user/31z3tixvlixclhjq3y5e7elynmwm">
+                            <div class="icon-cont">
+                                <img class="shortcut-arrow" src="./img/icons/shortcut.png">
+                                <img class="icon" src="./img/logos/spotify.png">
+                            </div>
+                            
+                            <span class="title">Spotify</span>
+                            <span class="title-sub">Nazaqat</span>
+                        </a>
+                    </div>
+                    <div class="link-cont">
+                        <a href="https://github.com/Nazatric">
+                            <div class="icon-cont">
+                                <img class="shortcut-arrow" src="./img/icons/shortcut.png">
+                                <img class="icon" src="./img/logos/github.png">
+                            </div>
+                            
+                            <span class="title">GitHub</span>
+                            <span class="title-sub">Nazatric</span>
+                        </a>
+                    </div>
+                    <div class="link-cont">
+                        <a href="https://pin.it/14nBdDOlQ">
+                            <div class="icon-cont">
+                                <img class="shortcut-arrow" src="./img/icons/shortcut.png">
+                                <img class="icon" src="./img/logos/pinterest.png">
+                            </div>
+                            
+                            <span class="title">Pinterest</span>
+                            <span class="title-sub">Nazaqat</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab-container tab-photos" style="display:none;">
+            <div class="main-widget with-header profile-photos">
+                <div class="header">
+                    <img src="./img/icons/photos.png">
+                    <span>Photos</span>
+                </div>
+                <div class="inner-content">
+                    <div class="photos-album template">
+                        <div class="header">
+                            <img class="icon" src="./img/icons/mypictures.png">
+                            <span class="title">Album</span>
+                        </div>
+                        <div class="album-content">
+                            <div class="photo template">
+                                <div class="photo-main-cont"><img class="photo-main" src="./img/genericimage.jpg"></div>
+                                <br>
+                                <span class="caption">Caption</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-container tab-friends" style="display:none;"></div>
+        <div class="tab-container tab-notes" style="display:none;">
+            <div class="main-widget with-header profile-notes">
+                <div class="header">
+                    <img src="./img/icons/notes.png">
+                    <span class="title">Notes</span>
+                </div>
+                <div class="inner-content">
+                    <div class="note-item template">
+                        <h1 class="title">Title</h1>
+                        <img class="thumb" style="display:none;" src="./img/genericimage.jpg">
+                        <p class="short-description" style="display:none;">Test</p>
+                        <div class="date-header"><span>2025-10-03</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-container tab-musicplayer" style="display:none;">
+            <div class="main-widget with-header music-player" id="mediaplayerwidget" data-playstate="paused">
+                <audio id="mediaplayerwidget_controller"></audio>
+                <div class="header">
+                    <img src="./img/icons/musicplayer.png">
+                    <span>Music Player</span>
+                </div>
+                <div class="inner-content">
+                    <div class="music-player-main">
+                        <div class="nowplaying-info">
+                            <div class="song-info">
+                                <img class="cover" src="./img/widgets/mediaplayer/genericcover.jpg">
+                                <div class="disc-cont">
+                                    <img class="disc" src="./img/widgets/mediaplayer/genericdisc.png"
+                                    onerror="this.src='./img/widgets/mediaplayer/genericdisc.png'">
+                                </div>
+                                
+                                <div class="text">
+                                    <span class="title">Title</span><br>
+                                    <span class="album">Album</span><br>
+                                    <span class="artist">Artist</span><br>
+                                    <span class="date">Date</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playlist-view">
+                            <div class="playlist-header">
+                                <span>Playlist view</span>
+                            </div>
+                            <div class="playlist-name">
+                                <img src="./img/widgets/mediaplayer/playlisticon.jpg">
+                                <span>My playlist</span>
+                            </div>
+                            <div class="playlist-list">
+                                <div class="list-item template">
+                                    <img class="icon" src="./img/icons/musicnote.png">
+                                    <span>Song 1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seekbar-cont">
+                        <div class="seekbar-mid">
+                            <div class="progress">
+
+                            </div>
+                            <div class="trackslider-cont">
+                                <button class="button-trackslider">
+                                    
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="controls-cont">
+                        <button class="button-play">
+                            <img src="./img/widgets/mediaplayer/button_play.png">
+                        </button>
+                        <button class="button-stop" disabled>
+                            <img src="./img/widgets/mediaplayer/button_stop.png">
+                        </button>
+                        <button class="button-prev" disabled>
+                            <img src="./img/widgets/mediaplayer/button_prev.png">
+                        </button>
+                        <button class="button-next" disabled>
+                            <img src="./img/widgets/mediaplayer/button_next.png">
+                        </button>
+                        <button class="button-volume">
+                            <img src="./img/widgets/mediaplayer/button_volume.png">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
