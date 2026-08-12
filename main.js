@@ -7,12 +7,65 @@ var config={
 
 var photo_albums=[
     {
-        name:"My photos",
+        name:"Random",
         icon:"./img/icons/pallette.png",
         photos:[
             {
                 src:"./media/photos/linkin_park.jpg",
                 caption:"Linkin Park",
+                date:"2026-08-12",
+            },
+            {
+                src:"./media/photos/camera.jpg",
+                caption:"camera",
+                date:"2026-08-12",
+            }
+        ]
+    },
+    {
+        name:"Old photos",
+        icon:"./img/icons/backup.png",
+        photos:[
+            {
+                src:"./media/photos/chou.jpg",
+                caption:"Chou",
+                date:"2026-08-12",
+            },
+            {
+                src:"./media/photos/labtarg.jpg",
+                caption:"labtarg",
+                date:"2026-08-12",
+            }
+        ]
+    },
+    {
+        name:"Nature",
+        icon:"./img/icons/flower.png",
+        photos:[
+            {
+                src:"./media/photos/sliding_tcesni.jpg",
+                caption:"sliding tcesni",
+                date:"2026-08-12",
+            },
+            {
+                src:"./media/photos/sun.jpg",
+                caption:"sun",
+                date:"2026-08-12",
+            }
+        ]
+    },
+    {
+        name:"Game stuff",
+        icon:"./img/icons/games.png",
+        photos:[
+            {
+                src:"./media/photos_other/big_planet.jpg",
+                caption:"big planet",
+                date:"2026-08-12",
+            },
+            {
+                src:"./media/photos_other/mercer.jpg",
+                caption:"Mercer",
                 date:"2026-08-12",
             }
         ]
@@ -23,16 +76,16 @@ var notes=[
     {
         title:"Skateboard",
         content:"<h1>Learning Skateboarding</h1>",
-        thumbnail:"./img/genericimage.jpg",
+        thumbnail:"./media/photos_other/skateboard.jpg",
         short_description: "Learning Skateboarding",
-        date:"2025-10-02",
+        date:"2026-08-11",
     },
     {
         title:"Tea",
         content:"<h1>Chai Tea Is good sometimes</h1>",
         thumbnail:"",
         short_description: "Chai Tea Is good sometimes",
-        date:"2025-10-02",
+        date:"2026-08-11",
     }
 ]
 
