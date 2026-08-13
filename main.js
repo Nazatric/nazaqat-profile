@@ -19,6 +19,11 @@ var photo_albums=[
                 src:"./media/photos/camera.jpg",
                 caption:"camera",
                 date:"2026-08-12",
+            },
+            {
+                src:"./media/photos/music_on_jerk_off.jpg",
+                caption:"music on jerk off",
+                date:"2026-08-13",
             }
         ]
     },
