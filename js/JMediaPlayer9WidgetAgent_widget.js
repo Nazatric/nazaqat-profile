@@ -126,9 +126,6 @@ class JMediaPlayer9WidgetAgent {
         this.playlist_items=document.querySelectorAll(`#${this.player_id} .playlist-list .list-item:not(.template)`);
         this.el_prev.disabled=false;
         this.el_next.disabled=false;
-
-        // show a random track's info up front so there's something to resume/play immediately
-        this.showatindex(Math.floor(Math.random()*this.playlist.length));
     }
 
     set_progresscontroller = () => {
