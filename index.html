@@ -243,7 +243,7 @@
 
         <div class="tab-container tab-musicplayer" style="display:none;">
             <div class="main-widget with-header music-player" id="mediaplayerwidget" data-playstate="paused">
-                <audio id="mediaplayerwidget_controller"></audio>
+                <audio id="mediaplayerwidget_controller" preload="auto"></audio>
                 <div class="header">
                     <img src="./img/icons/musicplayer.png">
                     <span>Music Player</span>
@@ -252,7 +252,7 @@
                     <div class="music-player-main">
                         <div class="nowplaying-info">
                             <div class="song-info">
-                                <img class="cover" src="./img/widgets/mediaplayer/genericcover.jpg">
+                                <img class="cover" decoding="async" src="./img/widgets/mediaplayer/genericcover.jpg">
                                 <div class="disc-cont">
                                     <img class="disc" src="./img/widgets/mediaplayer/genericdisc.png"
                                     onerror="this.src='./img/widgets/mediaplayer/genericdisc.png'">

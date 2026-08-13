@@ -107,11 +107,7 @@ class JMediaPlayer9WidgetAgent {
         this.audio_elem.addEventListener('ended', () => {
             this.resetseekbar();
             this.el_root.dataset.playstate="paused";
-            if(this.selected_index<this.playlist.length-1) {
-                this.playatindex(parseInt(this.selected_index)+1);
-            } else {
-                this.stop();
-            }
+            this.playatindex((parseInt(this.selected_index)+1) % this.playlist.length);
         })
 
         
@@ -128,6 +124,8 @@ class JMediaPlayer9WidgetAgent {
             document.querySelector(`#${this.player_id} .playlist-list`).appendChild(new_node);
         })
         this.playlist_items=document.querySelectorAll(`#${this.player_id} .playlist-list .list-item:not(.template)`);
+        this.el_prev.disabled=false;
+        this.el_next.disabled=false;
 
         // show a random track's info up front so there's something to resume/play immediately
         this.showatindex(Math.floor(Math.random()*this.playlist.length));
@@ -196,9 +194,6 @@ class JMediaPlayer9WidgetAgent {
         this.updatedisplay();
         this.playlist_items.forEach(item => item.classList.remove("selected"));
         this.playlist_items[this.selected_index].classList.add("selected");
-
-        this.el_next.disabled = (parseInt(this.selected_index)==this.playlist.length-1);
-        this.el_prev.disabled = (parseInt(this.selected_index)==0);
     }
 
     playatindex = (index) => {
@@ -213,15 +208,11 @@ class JMediaPlayer9WidgetAgent {
     }
 
     next = () => {
-        if(this.selected_index<this.playlist.length-1) {
-            this.playatindex(parseInt(this.selected_index)+1);
-        }
+        this.playatindex((parseInt(this.selected_index)+1) % this.playlist.length);
     }
 
     prev = () => {
-        if(this.selected_index>0) {
-            this.playatindex(parseInt(this.selected_index)-1);
-        }
+        this.playatindex((parseInt(this.selected_index)-1+this.playlist.length) % this.playlist.length);
     }
 
     stop = () => {
