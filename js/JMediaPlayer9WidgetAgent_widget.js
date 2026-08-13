@@ -184,9 +184,10 @@ class JMediaPlayer9WidgetAgent {
         this.el_root.dataset.album=this.playlist[this.selected_index].album;
         this.el_root.dataset.artist=this.playlist[this.selected_index].artist;
 
-        this.el_cover.src=this.playlist[this.selected_index].src.slice(0,-4)+"_cover.jpg";
-        this.el_disc.src=this.playlist[this.selected_index].src.slice(0,-4)+"_disc.png";
-        document.querySelector(':root').style.setProperty('--music-player-bk', "url(\""+this.playlist[this.selected_index].src.slice(0,-4)+"_background.webp\")");
+        var base=this.playlist[this.selected_index].src.replace(/\.[^/.]+$/, '');
+        this.el_cover.src=base+"_cover.jpg";
+        this.el_disc.src=base+"_disc.png";
+        document.querySelector(':root').style.setProperty('--music-player-bk', "url(\""+base+"_background.webp\")");
     }
 
     showatindex = (index) => {
